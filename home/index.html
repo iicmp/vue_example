@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+
+    <style>
+        body{
+            background-color: #C7EDCC;
+        }
+        nav{
+            background-color: #3d7289;
+            margin:auto;
+            width: 750px;
+            font-size: 0px;
+        }
+        a{
+            display: inline-block;
+            height: 50px;
+            width: 150px;
+            font-size: 25px;
+            text-align: center;
+            text-decoration: none;
+            line-height: 50px;
+            color:white;
+        }
+        p{
+            width: 700px;
+            margin:auto;
+            margin-top: 100px;
+            font-size: 70px;
+            color:green;
+        }
+        nav.one .one,
+        nav.two .two,
+        nav.three .three,
+        nav.four .four,
+        nav.five .five{
+            background-color: red;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="main">
+        <nav v-bind:class="active" v-on:click.prevent>
+            <a href="#" class="one" v-on:click="makeActive('one')">title one</a>
+            <a href="#" class="two" v-on:click="makeActive('two')">title two</a>
+            <a href="#" class="three" v-on:click="makeActive('three')">title three</a>
+            <a href="#" class="four" v-on:click="makeActive('four')">title four</a>
+            <a href="#" class="five" v-on:click="makeActive('five')">title five</a>
+        </nav>
+        <p id="text">你选择了{{active}}</p>
+    </div>
+    <script>
+        var demo= new Vue({
+            el:'#main',
+            data:{
+                active:'one'
+            },
+            methods:{
+                makeActive:function(item){
+                    this.active=item;
+                   
+                }
+            }
+        })
+    </script>
+</body>
+</html>
