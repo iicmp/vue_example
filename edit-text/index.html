@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 700px;
+            height: 300px;
+            background-color: green;
+            position: relative;
+        }
+        input{
+            display:inline-block;
+            background-color: transparent;
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            
+
+        }
+        p{
+            position: absolute;
+            top:50px;
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: #fff;
+            line-height:50px;
+            margin:0px;
+
+        }
+    </style>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    <div class="main" v-cloak v-on:click="hideToolTip">
+
+        <div class="tooltip" v-on:click.stop v-if="show">
+            <input type="text" v-model="content">
+        </div>
+        
+        <p  v-on:click.stop="toggleToolTip">{{content}}</p>
+    </div>
+
+    <script>
+        var demo=new Vue({
+            el:".main",
+            data:{
+                show:false,
+                content:"点我，并编辑内容"
+
+            },
+            methods:{
+                toggleToolTip:function(){
+                    this.show=!this.show;
+                },
+                hideToolTip:function(){
+                    this.show=false;
+                }
+            }
+
+
+        })
+    </script>
+    
+</body>
+</html>
