@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+<body>
+    <div class="main">
+        <input type="text" v-on:keyup="search()" v-model=text v-on:click="showTip">
+        <ul>
+            <li v-for="item in list" v-if="item.show" >
+                    {{item.name}} 
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var demo=new Vue({
+            el:".main",
+            data:{
+                list:[
+                    {
+                        name:'apple',
+                        show:false
+                    },
+                    {
+                        name:'pear',
+                        show:false
+                    },
+                    {
+                        name: 'peach',
+                        show:false
+                    },
+                    {
+                        name:'onion',
+                        show:false
+                    },
+                    {
+                        name:'tomato',
+                        show:false
+                    },
+                    {
+                        name:'oragin',
+                        show:false
+                    }       
+                ],
+
+                text:'initial'
+            },
+            methods:{
+                search:function(){
+                    this.list.forEach(element => {
+
+                        var val=this.text.toUpperCase();
+                        var i= element.name.toUpperCase().indexOf(val);
+                        if(i>0){
+                            element.show=true;
+                        }else{
+                            element.show=false;
+                        }
+                    });
+                },
+                showTip:function(){
+                    this.list.forEach(element=>{
+                        element.show=true;
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>
