@@ -6,8 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="../vue.min.js"></script>
+    <style>
+        .main{
+            width:300px;
+            margin:0 auto;
+            position:relative;
+        }
+        input{
+            width:120px;
+            height:20px;
+            line-height: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border:2px solid;
+        }
+        ul{
+            list-style-type: none;
+            width:128px;
+            position:absolute;
+            top:45px;
+            padding:0;
+            
+        }
+        li{
+            border:1px solid grey;
+            border-radius: 5px;
+            padding-left: 5px;
+            color:gray;
+        }
+    </style>
 <body>
     <div class="main">
+        <p>请在搜索框中输入单词，提示将自动给出</p>
         <input type="text" v-on:keyup="search()" v-model=text v-on:click="showTip">
         <ul>
             <li v-for="item in list" v-if="item.show" >
