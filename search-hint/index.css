@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+#myInput{
+    border-radius: 10px;
+    border:coral 0.5px solid;
+    outline: none;
+}
+#myUL{
+    margin:0;
+    padding-left: 10px;
+    margin-top: -1px;
+}
+#myUL{
+    width:170px;
+    border-radius: 10px;
+    border:2px rgb(241, 221, 213) solid;
+    display: none;
+}
+#myUL>li{
+    list-style-type: none;
+    color:rgb(110, 68, 68);
+    
+}

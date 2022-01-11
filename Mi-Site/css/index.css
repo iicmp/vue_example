@@ -1,0 +1,374 @@
+/* #region body部分 */
+body{
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color: #333;
+    background-color: #fff;
+    min-width: 1226px;
+}
+.container{
+    width:1226px;
+    margin:0 auto;
+}
+/* #endregion */
+
+/* #region 顶部栏 */
+.topbar{
+    width:100%;
+    height:40px;
+    color:#b0b0b0;
+    font-size: 12px;
+    background-color: #333; 
+}
+.topbar .container .topbar-list{
+    float:left;
+}
+.topbar .container .shop{
+    float:right;
+    width:120px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #424242;
+}
+.topbar .container .login{
+    float:right;
+    width:180px;
+    text-align: center;
+}
+.topbar a{
+    display:inline-block;
+    line-height: 40px;
+    color:#b0b0b0;
+}
+.topbar a:hover{
+    color:#fff;
+}
+.topbar .shop:hover{
+    background-color: #fff;
+    color:coral;
+}
+.topbar span{
+    color:#424242;
+    margin:0 .5em;
+}
+/* #endregion */
+
+/* #region 导航栏 */
+
+/* logo */
+.header .header-logo{
+    height:100px;
+    float:left;
+}
+.header .header-logo .mi-logo{
+    margin-top:22px;
+}
+.header .header-logo .mifen{
+    margin-left:50px;
+}
+/* 横列表 */
+.header .header-hlist{
+    float:right;   
+    height:100px;
+    margin-right:70px;
+    position: relative;  
+    z-index: 5;
+}
+.header .header-hlist a{
+    font-size:16px;
+    color:black;
+    width:200px;
+    height:50px;
+    line-height: 100px;
+    margin-left:1.5em;
+}
+.header .header-hlist a:hover{
+    color:#FE4E37;
+}
+/* 竖列表 */
+.header .header-vlist{
+    position: relative;
+    z-index: 3;
+}
+.header .header-vlist ul{
+    clear:both;
+    background-color: grey;
+    width:250px;
+    height:460px;
+    z-index: 3;
+   
+}
+.header .header-vlist .first-a{
+    margin-top:25px;
+}
+.header .header-vlist a{
+    font-size:14px;
+    color:#fff;
+    line-height: 41px;
+    display:inline-block;
+    width:250px;
+    height:41px;
+    position:relative;
+    z-index: 3;
+}
+.header .header-vlist span{
+    margin-left:25px;
+}
+.header .header-vlist a>i{
+    position:absolute;
+    right:20px;
+}
+.header .header-vlist a:hover{
+    background-color:#FE4E37;
+}
+/* 搜索框 */
+.header .header-search{
+    float:right;
+    height:100px;
+}
+.header .header-search .search-ipt {
+    border:1px #b0b0b0 solid;
+    height: 35px;
+    margin-top: 32px;
+    color:darkgray;
+}
+.header .header-search .search-btn{
+    border:1px #b0b0b0 solid;
+    height: 39px;
+    width:37px;
+    background-color: #fff;
+    margin-top: 32px;
+    margin-left:-5px;
+}
+/* #endregion */
+
+
+/* #region 内容主页-海报栏 */
+.site-content .poster{
+    position:relative;
+    height: 25px;
+}
+.site-content .poster .phonepic{
+    width:1226px;
+    z-index: 2;
+    display: inline-block;
+    position:absolute;
+    top:-460px;
+}
+.site-content .poster img{
+    width:1226px;
+    z-index: 2;
+
+}
+.site-content .poster .pre{   
+    position: absolute;   
+    bottom:250px;
+    left:250px;
+    z-index: 3;
+}
+.site-content .poster span{
+    font-size: 50px;
+    color:#CCCCCC;
+}
+.site-content .poster span:hover{
+    background-color:#CCCCCC;
+    color:#fff;
+}
+.site-content .poster .next{
+    position: absolute;  
+    bottom:250px;
+    left:1176px;
+    z-index: 3;
+}
+.site-content .poster .dot {
+    display: inline-block;
+    position: absolute;
+    bottom:30px;
+    right:30px;
+    z-index: 3;  
+    
+    height:25px;
+    /* background-color: black; */
+}
+.site-content .poster .dot a{
+    display: inline-block;
+    border-radius: 50%;
+    width:10px;
+    height:10px;
+    background-color: #CCCCCC;
+    margin-left:10px;
+}
+.site-content .poster .dot a:hover{
+    background-color: #fff;
+}
+/* #endregion */
+
+/* #region 内容主页-图片banner栏 */
+.site-content .picture .tubiao{
+    width:250px;
+    height:161.39px;
+    background-color:	#8B4726;
+    float:left;
+}
+.site-content .picture .tubiao .line{
+    width:250px;
+    height:80.6px;
+}
+.site-content .picture .tubiao .line span{
+    color:#cccccc;
+    text-align: center;
+    width:33.33%;
+    height:80.6px;
+    float:left;    
+}
+.site-content .picture .tubiao .line span:hover{
+    color:#fff;  
+}
+.site-content .picture .tubiao i{
+    display: block; 
+    margin-top:20px;   
+}
+.site-content .picture img{
+    width:300px;
+    float:right;
+    margin-left:25px;
+}
+.site-content .banner img{
+    margin-top:25px;
+    width:1226px;
+}
+/* #endregion */
+
+/* #region 内容详情区 */
+.content {
+    background-color:#F7F7F7;  
+}
+.content .text{
+    height:70px;
+    position: relative;
+}
+.content .title{
+    position: absolute;
+    bottom:10px;
+    font-size: 30px;
+  
+}
+.content .all{
+    position:absolute;
+    bottom:5px;
+    left:1120px;
+    font-size:20px;
+    color:#FE4E37;
+}
+.content .phone-display{
+    font-size: 0px;
+}
+.content .phone-display .left{
+    float:left;
+}
+.content .phone-display .right{
+    display: inline-block;
+    width:240px;
+    height:303px;
+    background-color: #fff;
+    margin-left:8px;
+    vertical-align: middle;
+    text-align: center;
+}
+.content .phone-display .right img{
+    width:150px;
+    margin-top:20px;
+}
+.content .phone-display .bottom{
+    margin-top:8px;
+}
+.container .phone-display .right .name{
+    color:black;
+    font-size: 15px;
+    margin-top: 15px;
+}
+.container .phone-display .right .feature{
+    color:grey;
+    font-size: 10px;
+}
+.container .phone-display .right .price{
+    color:#FE4E37;
+    font-size: 10px;
+    margin-top: 10px;
+}
+/* #endregion */
+
+/* #region 脚部 */
+.foot{
+    background-color: #fff;
+    height:70px;
+    
+}
+.foot .top a{
+    display: inline-block;
+    line-height: 70px;
+    font-size: 17px;
+    text-align: center;
+    color:grey;
+}
+.foot .top span{
+    font-size: 20px;
+    color:#cccccc;
+}
+.foot .top .line{
+    height: 0.5px;
+    background-color:#CCCCCC; 
+}
+.foot .bottom{
+    height:150px;
+    background-color: #fff;
+
+}
+.foot .bottom ul{
+    display: inline-block;
+    width:163px;
+}
+.foot .bottom li{
+    color:grey;
+    font-size: 10px;
+}
+.foot .bottom .first-row{
+    margin-top:20px;
+    margin-bottom:20px;
+    color:black;
+}
+.foot .bottom .vline{
+    display: inline-block;
+    width:1px;
+    height:100px;
+    background-color: #CCCCCC;
+   
+}
+.foot .bottom .seventh{
+    width:200px;
+}
+.foot .bottom .seventh li{
+    text-align: center;
+} 
+.foot .bottom .number{
+    font-size: 20px;
+    color:#FE4E37;
+
+}
+.foot .bottom .time{
+    font-size: 8px;
+    color:black;
+}
+.foot .bottom .service{
+    color:#FE4E37;
+    font-size: 12px;
+    margin-top: 15px;
+    
+}
+.foot .bottom .service span{
+    border:1px solid #FE4E37;
+    padding:5px;
+   
+}
+
+/* #endregion */
